@@ -10,8 +10,21 @@
     width: 30%;
     animation: rotate infinite linear 20s;
 }
+
+.main__title {
+    font-size: 4vw;
+}
+
 .main__subtitle {
     color: #61dafb;
+}
+
+.main__subtitle:active {
+    color: #0a9fc9 !important;
+}
+
+.main__subtitle:visited {
+    color: #61dafb !important;
 }
 
 @keyframes rotate {
@@ -20,5 +33,40 @@
     }
     to {
         transform: rotate(360deg);
+    }
+}
+
+
+@media screen and (max-width: 765px) {
+    
+    .main .main__img {
+        width: 40%;
+        animation: rotate infinite linear 20s;
+    }
+    
+    .main__title {
+        font-size: 5vw;
+    }
+    
+    .main__subtitle {
+        color: #61dafb;
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    
+    .main .main__img {
+        width: 70%;
+        animation: rotate infinite linear 20s;
+    }
+    
+    .main__title {
+        font-size: 6vw;
+    }
+    
+    .main__subtitle {
+        color: #61dafb;
+        font-size: 3vw;
     }
 }

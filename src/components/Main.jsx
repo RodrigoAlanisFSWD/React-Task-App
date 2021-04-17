@@ -9,7 +9,7 @@ function Main() {
                 Welcome To My React Project!
             </h1>
             <a href="https://github.com/RodrigoAlanisWeb" className="main__subtitle">
-                Go To My Github Profile! <i class="fab fa-github"></i>
+                Go To My Github Profile! <i className="fab fa-github"></i>
             </a>
         </div>
     )
