@@ -1,24 +1,25 @@
 import { useForm } from 'react-hook-form';
 import Alert from './Alert';
 import uniqid from 'uniqid';
-import './Form.css';
 
-function Form() {
+function Form(props) {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
         data.id = uniqid();
+        data.done = false;
         if (!localStorage.getItem('tasks')) {
             localStorage.setItem('tasks', JSON.stringify([data]));
-            return;
+        } else {
+            const tasks = JSON.parse(localStorage.getItem('tasks'));
+            tasks.push(data);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
         }
 
-        const tasks = JSON.parse(localStorage.getItem('tasks'));
-        tasks.push(data);
-        localStorage.setItem('tasks', JSON.stringify(tasks));
+        props.handleUpdate()
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className="w-50 mx-auto mt-5" id="form">
+        <form onSubmit={handleSubmit(onSubmit)} className="w-50 mx-auto mt-5 ra-container">
             <label className="form-label">
                 Name
             </label>
