@@ -10,7 +10,7 @@ export default function Task(props) {
     return (
         <tr>
             <th>{props.data.name}</th>
-            <td>{props.data.category == 1 ? 'Programming' : 'Other'}</td>
+            <td>{props.data.category === 1 ? 'Programming' : 'Other'}</td>
             <td>{props.data.done ? 'Done' : 'Not Done'}</td>
             <td>
                 <button onClick={deleteTask} className="btn btn-danger">
