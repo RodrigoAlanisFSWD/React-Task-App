@@ -16,7 +16,7 @@ function Navbar() {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                        <NavLink to="/" activeClassName="active" className="nav-link">Home</NavLink>
+                        <NavLink exact to="/" activeClassName="active" className="nav-link">Home</NavLink>
                     </li>
                     <li className="nav-item">
                         <NavLink to="/tasks" href="#/" activeClassName="active" className="nav-link">Tasks</NavLink>
